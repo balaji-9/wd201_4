@@ -21,26 +21,23 @@ const todoList = () => {
   );
 
   const overdue = () => {
-    let due3 = all.filter((item) => item.dueDate == yesterday);
-    return due3;
+    return all.filter((item) => item.dueDate === yesterday);
   };
 
   const dueToday = () => {
-    let due = all.filter((item) => item.dueDate === today);
-    return due;
+    return all.filter((item) => item.dueDate === today);
   };
 
   const dueLater = () => {
-    let due1 = all.filter((item) => item.dueDate === tomorrow);
-    return due1;
+    return all.filter((item) => item.dueDate === tomorrow);
   };
 
   const toDisplayableList = (list) => {
     let ans = [],
       index;
     for (index = 0; index < list.length; index++) {
-      let box = list[index].completed == true ? "[x]" : "[ ]";
-      let adddate = list[index].dueDate == today ? "" : list[index].dueDate;
+      let box = list[index].completed === true ? "[x]" : "[ ]";
+      let adddate = list[index].dueDate === today ? "" : list[index].dueDate;
       ans.push(`${box} ${list[index].title} ${adddate}`);
     }
     let res = ans.join("\n");
