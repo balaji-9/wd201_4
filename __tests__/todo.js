@@ -33,7 +33,7 @@ describe("TodoLIst Test Suite ", () => {
     add({
       title: "Overdue test",
       completed: false,
-      dueDate: new Date(new Date().setDate(new Date().getDate() - 1))
+      dueDate: new Date(new Date().setDate(new Date().getDate() - 10))
         .toISOString()
         .split("T")[0],
     });
@@ -59,7 +59,7 @@ describe("TodoLIst Test Suite ", () => {
     add({
       title: "dueLater test",
       completed: false,
-      dueDate: new Date(new Date().setDate(new Date().getDate() + 1))
+      dueDate: new Date(new Date().setDate(new Date().getDate() + 10))
         .toISOString()
         .split("T")[0],
     });
