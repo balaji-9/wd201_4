@@ -34,8 +34,7 @@ describe("TodoLIst Test Suite ", () => {
       title: "Overdue test",
       completed: false,
       dueDate: new Date(new Date().setDate(new Date().getDate() - 10))
-        .toISOString()
-        .split("T")[0],
+        .toLocaleDateString("en-CA"),
     });
     overdueItems = overdue();
     expect(overdueItems.length).toBe(len + 1);
@@ -60,8 +59,7 @@ describe("TodoLIst Test Suite ", () => {
       title: "dueLater test",
       completed: false,
       dueDate: new Date(new Date().setDate(new Date().getDate() + 10))
-        .toISOString()
-        .split("T")[0],
+        .toLocaleDateString("en-CA"),
     });
     dueLaterItems = dueLater();
     expect(dueLaterItems.length).toBe(len + 1);
